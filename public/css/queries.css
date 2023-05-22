@@ -1,0 +1,139 @@
+/* rem and em do not depend on html font-size in media queries!
+Instead, 1rem = 1em = 16px */
+
+/* 1350px / 16px = 84em */
+/****************************/
+  /* BELOW 1344px (Smaller desktops) */
+/***************************/
+@media(max-width: 84em){
+  .hero{
+    max-width: 120rem;
+  }
+
+  .heading-primary{
+    font-size: 4.4rem;
+  }
+
+  .gallery{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/****************************/
+  /* BELOW 1200px (Landscape Tablets) */
+/***************************/
+@media(max-width: 75em){
+  html{
+    /* 9px / 16px = 0.5625*/
+    font-size: 56.25%;
+  }
+
+  .grid{
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary{
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary{
+    font-size: 2.4rem;
+  }
+
+  .header{
+    padding: 0rem 3.2rem;
+  }
+
+  .hero{
+    gap: 4.8rem;
+  }
+
+  .main-nav-list{
+    gap: 3.2rem;
+  }
+
+  .testimonials-container{
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/* 944px / 16px = 59em */
+/****************************/
+  /* BELOW 944px (Tablets) */
+/***************************/
+@media(max-width: 59em){
+  /* we want a font-size of 8px so the calc is 
+    8px / 16px = 0.5 = 50%
+  */
+  html{
+    font-size: 50%;
+  }
+
+  .hero{
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box{
+    text-align: center;
+  }
+
+  .hero-img{
+    width: 60%;
+  }
+
+  .delivered-meals{
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .logos img{
+    height: 2.4rem;
+  }
+
+  .step-number{
+    font-size: 7.4rem;
+  }
+
+  .meal-content{
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .section-testimonials{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery{
+    grid-template-columns: repeat(6,1fr);
+    grid-row: repeat(2,1fr);
+  }
+
+  .cta{
+    /* we have a total of 3fr + 2fr = 5fr.
+      1st column will get 3 of 5 => 3/5 = 60%
+      2nd column 2/5
+
+    */
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form{
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form{
+    margin-top: 1.2rem;
+  }
+}
+
+/* - FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+  
+  
+  - SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+  */
